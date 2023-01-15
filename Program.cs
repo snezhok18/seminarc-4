@@ -32,7 +32,28 @@ return result;
 // 82 -> 10
 // 9012 -> 12
 
+Console.WriteLine("Ведите число: ");
+int num21 = int.Parse(Console.ReadLine()!);
+Console.WriteLine($"Сумма всех цифр введенного числа равна: {Summ(num21)}");
 
+int Summ(int num21)
+{
+    int num22 = num21;
+    int count = 0;
+    while (num21 > 0)
+    {
+        num21 /=10;
+        count +=1;        
+    }
+    int result = 0;
+    for (int i = 1; i <= count; i++)
+    {
+        int sim = num22%10;
+        num22 /=10;
+        result +=sim;
+    }
+    return result;
+}
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов
 // и выводит их на экран. (числа берете любые)
